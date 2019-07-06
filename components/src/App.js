@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Navbar,NavbarBrand,Media,car} from 'reactstrap'
+import {Navbar,NavbarBrand,Media,} from 'reactstrap'
 
 class App extends React.Component{
 constructor(props){
