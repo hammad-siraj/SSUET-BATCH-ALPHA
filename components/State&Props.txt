@@ -56,7 +56,9 @@ let arr2 =[ ];
 
  arr1.forEach( function(param){  arr2.push( param.id)    })
 
-let arr2 = arr1.map( function(param){ return param.id  } )
+
+
+let arr3 = arr1.map( function(param){ return param.id  } )
 
 es6
 let arr2 = arr1.map((param)=> param.id)
@@ -108,6 +110,19 @@ user interface
 
 
 
+
+
+es6:
+
+destructuring
+ map()
+ternary operator
+string literals
+ filter()
+
+
+react 
+input handler
 
 
 

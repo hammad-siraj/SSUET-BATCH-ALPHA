@@ -51,8 +51,8 @@ renderBody =()=>{
        <div>
             {text ? <h1>{`you are searching for ${text}`}</h1>:null}
            
-           {item.map((it,id)=>{
-             return(<li key={id}>{it}</li> )
+           {item.map((items,id)=>{
+             return(<li key={id}>{items}</li> )
            })}
        </div>
 
