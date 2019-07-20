@@ -1,0 +1,118 @@
+                     React Router
+
+Routing is the ability to move between different parts of an application when a user enters a URL or clicks an element (link, button, icon, image etc) within the application.
+
+Library used : React Router
+
+npm install --save react-router-dom
+
+The react router provides no of router that we can use for our purpose:
+
+•Browser Router
+•Hash Router
+
+
+Example:
+
+ReactDOM.render(
+  <BrowserRouter>
+    <App/>
+  </BrowserRouter>,
+  document.getElementById(‘root’));
+ 
+                                         What is Router ?     
+
+• Collection of navigational components
+– Enables navigation among views
+– Router components, route matching components and
+navigation components
+• Uses a browser-based bookmarkable URLs as an instruction
+to navigate to a client-generated view in your web app
+– Can also pass along optional parameters
+
+                            Web App Routing
+• Router component: <BrowserRouter>
+– Creates specialized history object
+– Enclose your app in BrowserRouter
+
+
+                                            Route
+
+
+• Route matching components: <Route> and <Switch>
+
+<Route path="/"   component,render,children />  
+
+
+
+– <Route>’s path prop enables specification of the current location’s
+pathname
+
+url : A string that returns the matched part of the URL
+path : A string that returns the route’s path
+isExact : A boolean that returns true if the match was exact
+params : An object containing key-value pairs that were matched by the Path-To-RegExp package.
+
+– <Route>’s component prop specifies the corresponding view for the
+location
+
+– Using exact attribute ensures that the path must be exactly matched
+
+– <Redirect> enables the default route specification
+
+                                                                      Switch
+The react-router library also contains a <Switch/> component that is used to wrap multiple <Route/> components. The Switch component only picks the first matching route among all its children routes.
+
+– <Switch> enables grouping together several routes
+
+• Will iterate over all its children and find the first one that matches the path
+
+
+
+
+                                  Navigation
+• Navigation is supported through the <Link>
+and <NavLink> components:
+– <Link> creates links in your application
+• Will render as <a> in the HTML
+•When the Link component is clicked, it also updates the URL
+– <NavLink> also attaches the active class to the link
+when its prop matches the current location
+
+
+
+
+
+
+                                               React Router(parameter)
+• Paths specified as a URL
+• Paths can also carry parameter values:
+example:<Route path="/mobile/:id"/>
+
+
+
+                                             Route Parameters
+
+• Route parameters can be specified using a link parameter
+while specifiyng the link
+– e.g., <Link to{`/menu/${dish.id}`} >
+• Route passes three props to the component:
+– match, location, history
+
+
+
+                                                MATCH OBJECT
+• match object provides information about how a <Route
+path> matched the URL
+– params: an object that contains key/value pair parsed from
+the URL corresponding to the dynamic segments of the
+path
+– e.g. if path is specified as /menu/:id, then a path like
+/menu/42 will result in match.params.id being equal to
+“42”
+
+
+
+
+
+
