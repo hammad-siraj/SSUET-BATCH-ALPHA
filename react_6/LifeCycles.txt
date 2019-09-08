@@ -10,6 +10,8 @@ Unmount – Death of your component
 Common lifeCycles Methods in React:
 
  1 => render(){
+
+it must found on every class based component.
 It is a pure function.
 You cannot set state in render()
 
@@ -44,3 +46,16 @@ false not render again
 true render again
 
 }
+
+
+var exp = function(){
+xyz
+}
+
+var exp2 =exp;
+exp2();
+
+
+
+
+

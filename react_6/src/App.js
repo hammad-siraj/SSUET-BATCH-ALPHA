@@ -82,7 +82,9 @@ export class UserList extends React.Component {
 
   }
 
-  shouldComponentUpdate(){
+  shouldComponentUpdate(props){
+    console.log("should",props)
+    
     return true
   }
 
@@ -109,19 +111,32 @@ export class Timer extends React.Component {
   }
 
 
+componentDidMount(){
+  this.time = window.setInterval(()=>{
+    this.setState({
+      timer:this.state.timer +1,
+    })
+  },2000)
+}
 
-  componentWillUnmount(){
-    console.log("component will unmount")
-window.clearInterval(this.time)
-  }
 
-  componentDidMount() {
- this.time=window.setInterval(() => {
-      this.setState({
-        timer: this.state.timer + 1
-      })
-    }, 1000)
-  }
+// componentWillUnmount(){
+//   window.clearInterval(this.time)
+// }
+
+
+//   componentWillUnmount(){
+//     console.log("component will unmount")
+// window.clearInterval(this.time)
+//   }
+
+//   componentDidMount() {
+//  this.time=window.setInterval(() => {
+//       this.setState({
+//         timer: this.state.timer + 1
+//       })
+//     }, 1000)
+//   }
 
   render() {
     console.log(this.state.timer)

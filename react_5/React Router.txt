@@ -12,15 +12,20 @@ The react router provides no of router that we can use for our purpose:
 •Hash Router
 
 
+
+
 Example:
 
 ReactDOM.render(
-  <BrowserRouter>
+<BrowserRouter> 
     <App/>
-  </BrowserRouter>,
+</browserRouter>
+,
+
   document.getElementById(‘root’));
  
-                                         What is Router ?     
+
+                       What is                    Router ?     
 
 • Collection of navigational components
 – Enables navigation among views
@@ -53,6 +58,8 @@ path : A string that returns the route’s path
 isExact : A boolean that returns true if the match was exact
 params : An object containing key-value pairs that were matched by the Path-To-RegExp package.
 
+Consider the route "/users/:userId". match.path would be "/users/:userId" while match.url would have the :userId value filled in, e.g. "users/5".
+
 – <Route>’s component prop specifies the corresponding view for the
 location
 
@@ -60,7 +67,8 @@ location
 
 – <Redirect> enables the default route specification
 
-                                                                      Switch
+                                        Switch
+
 The react-router library also contains a <Switch/> component that is used to wrap multiple <Route/> components. The Switch component only picks the first matching route among all its children routes.
 
 – <Switch> enables grouping together several routes
@@ -73,6 +81,7 @@ The react-router library also contains a <Switch/> component that is used to wra
                                   Navigation
 • Navigation is supported through the <Link>
 and <NavLink> components:
+
 – <Link> creates links in your application
 • Will render as <a> in the HTML
 •When the Link component is clicked, it also updates the URL
@@ -84,7 +93,7 @@ when its prop matches the current location
 
 
 
-                                               React Router(parameter)
+                             React Router(parameter)
 • Paths specified as a URL
 • Paths can also carry parameter values:
 example:<Route path="/mobile/:id"/>
@@ -95,7 +104,7 @@ example:<Route path="/mobile/:id"/>
 
 • Route parameters can be specified using a link parameter
 while specifiyng the link
-– e.g., <Link to{`/menu/${dish.id}`} >
+– e.g., <Link to{`/menu/${id}`} >
 • Route passes three props to the component:
 – match, location, history
 

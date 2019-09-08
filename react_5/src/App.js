@@ -8,18 +8,19 @@ export default class App  extends Component {
       <div className="App-header">
         <h1>Mobile Shop</h1>
 
-        <Link to="/home">Home</Link>
+  
+        <Link active to="/home">Home</Link>
        <Link to="/mobilelist">Mobile list</Link>
-       <Link to="/about">About</Link>
+       <Link to="/about">About</Link> 
 
+      
       <Switch>
       <Route exact path="/home" render={()=>{return (<Home data={"props"}/>)}}/> 
      <Route  path="/home2" render={()=>{return (<About/>)}}/>
      <Route path="/about" render={()=>{return(<About/>)}}/>
      <Route path="/mobilelist" component={MobileList}/>
      </Switch>
-     
-
+ 
 
       </div>
     )
@@ -28,7 +29,7 @@ export default class App  extends Component {
 
 const Home = (props)=>(
   <div>
-    <h1>Home 1</h1>
+    <h1>{props.data}</h1>
     {/* <h2>{props.data}</h2> */}
   </div>)
 
@@ -38,39 +39,51 @@ const MobileList = ({match})=>(
     <h1>
       Mobile list
     </h1>
-
-    <ol>
+ 
+     <ul>
       <li><Link to={`${match.url}/iphone`}>Iphone</Link></li>
       <li><Link to={`${match.url}/samsung`}>Samsung</Link></li>
       <li><Link to={`${match.url}/qmobile`}>Q-mobile</Link></li>
 
-    </ol>
+    </ul>
+
+
+
   <Route path={`${match.path}/:brandName`}
-  render={(props)=>{return (<BranDetails {...props}/>)}}
+  component={BranDetails}
    />
-  
+    
   </div>
 )
 
 const BranDetails =({match})=>{
 return(
   <div>
-<h1>ALL {match.params.brandName} list</h1> 
-{match.params.brandName === "iphone" ? 
+
+
+{match.params.brandName==="iphone" ?
 <ul>
-  <li>Iphone 6</li>
-  <li>iphone 7</li>
-  <li>iphone 8</li>
+  <li>iphone 1</li>
+  <li>iphone 2</li>
+  <li>iphone 3</li>
 
 </ul>:null
-} 
-  
-  
+}
+
   </div>
 )
 
 }
 
+
+
+const Home2 =()=>{
+  return (
+    <h1>
+      HOME2
+    </h1>
+  )
+}
 
 const About =()=>(
   <div>
