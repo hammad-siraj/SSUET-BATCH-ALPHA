@@ -59,8 +59,6 @@ const MobileList = ({match})=>(
 const BranDetails =({match})=>{
 return(
   <div>
-
-
 {match.params.brandName==="iphone" ?
 <ul>
   <li>iphone 1</li>
