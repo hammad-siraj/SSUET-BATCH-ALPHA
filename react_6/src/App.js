@@ -44,7 +44,7 @@ export default class App extends React.Component {
 
     // this.setState({
     //   data:"change"
-    // })
+    // }) // we cant do this because render is a pure function and call on every setState.
 
     console.log("render")
     return (
