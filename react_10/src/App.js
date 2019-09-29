@@ -19,7 +19,7 @@ export default class App extends Component {
 
 componentDidMount(){
   fetch("https://api.github.com/users/hammad-siraj").then((response)=>{
-return response.json();
+   return response.json(); //we have to return from here in order to get data in second then.
 }).then((user)=>{
 this.setState({
   name:user.name,
