@@ -28,10 +28,13 @@ componentDidMount(){
   db.on("value",(snapshot)=>{
     var obj = snapshot.val();
   for(var props in obj)
-   data.push(obj[props])
+
+  data.push(obj[props])
+
   this.setState({
     data:data
   })
+
   data=[]
   })
 
