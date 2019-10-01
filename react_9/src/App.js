@@ -12,7 +12,7 @@ const mapStateToProps =(state)=>{
 const mapDispatchToProps =(dispatch)=>({
   saveTodo:(todo)=>{dispatch(saveTodo(todo))}
 })
-
+// firebase todo part complete the remaining part by yourslef.
  class App extends React.Component {
 constructor(props){
   super(props)
