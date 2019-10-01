@@ -4,7 +4,8 @@ import './App.css';
 import { firebaseConfig, db } from './firebase';
 
 
-
+//firebase crud basic 
+//paste your firebase config in your index.js file if you not make global variable in separate file.
 export default class App extends React.Component {
   constructor(){
     super();
