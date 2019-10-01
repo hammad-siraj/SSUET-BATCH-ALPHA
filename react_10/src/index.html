@@ -1,0 +1,42 @@
+<htm>
+  <body>
+    <script>
+
+var arr =[4,7,8,7,4,8,12,4,5,9,8];
+
+var val =[];
+var counter=[];
+for(i=0;i<arr.length;i++){
+var count=1;
+
+  for(j=i+1;j<arr.length;j++){
+  
+  if(arr[j]===arr[i]){
+  count++;
+  val.push(arr[i])
+  counter.push(count)
+
+}
+
+  
+  }
+  
+  // console.log(val)
+  //  console.log(counter)
+
+}
+
+
+
+
+for(var x =0; x<val.length;x++){
+
+console.log(val[x],counter[x])
+}
+
+
+
+
+      </script>
+  </body>
+</htm>
