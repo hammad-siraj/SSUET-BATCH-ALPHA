@@ -15,6 +15,7 @@ const mapDispatchToProps =(dispatch)=>({
 })
 
 class App extends React.Component {
+  
   render() {
 console.log(this.props.myCount)
     return (
