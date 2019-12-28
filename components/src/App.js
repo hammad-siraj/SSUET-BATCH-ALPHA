@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-
+//notes of state and props and book link  available in the root directory named as State&Props.txt.
 
 
 
